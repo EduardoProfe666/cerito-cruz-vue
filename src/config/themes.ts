@@ -23,7 +23,7 @@ export const themes: Record<string, Theme> = {
   },
   neon: {
     id: 'neon',
-    name: 'Neon Dreams',
+    name: 'Neón',
     background: 'bg-gradient-to-br from-purple-900 via-pink-900 to-purple-900',
     playerX: 'text-cyan-400',
     playerO: 'text-pink-400',
