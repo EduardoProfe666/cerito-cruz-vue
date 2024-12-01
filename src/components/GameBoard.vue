@@ -6,7 +6,7 @@ import GameCell from './GameCell.vue'
 import { Player, Board, WinningLine } from '../types/game'
 import { themes } from '../config/themes'
 
-const props = defineProps<{
+defineProps<{
   theme: string
 }>()
 
