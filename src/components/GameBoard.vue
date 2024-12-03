@@ -95,7 +95,7 @@ const gameStatus = computed(() => {
   return t('game.currentTurn', { player: currentPlayer.value })
 })
 
-const startGame = (player: Player) => {
+const startGame = (player: any) => {
   currentPlayer.value = player
   gameStarted.value = true
   playSound('click')

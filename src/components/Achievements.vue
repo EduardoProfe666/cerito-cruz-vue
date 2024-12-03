@@ -1,6 +1,6 @@
 <template>
   <div class="space-y-4">
-    <h2 :class="[themes[theme].textColor, 'text-2xl font-bold mb-4']">{{ $t('achievements.title') }}</h2>
+    <h2 :class="[themes[store.theme].textColor, 'text-2xl font-bold mb-4']">{{ $t('achievements.title') }}</h2>
     
     <div class="grid gap-4">
       <div
@@ -35,14 +35,10 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
 import { useGameStore } from '../stores/game'
 import { themes } from '../config/themes'
 import {useI18n} from "vue-i18n";
 
-const props = defineProps<{
-  theme: string
-}>()
 
 const store = useGameStore()
 const { t } = useI18n()

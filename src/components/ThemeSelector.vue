@@ -2,9 +2,6 @@
 import { computed } from 'vue'
 import { useGameStore } from '../stores/game'
 import { themes } from '../config/themes'
-import {useI18n} from "vue-i18n";
-
-const {t} = useI18n()
 
 const store = useGameStore()
 const availableThemes = computed(() => 
