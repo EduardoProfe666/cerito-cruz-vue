@@ -1,9 +1,8 @@
 import { Theme } from '../types/game'
-
 export const themes: Record<string, Theme> = {
   default: {
     id: 'default',
-    name: 'Predeterminado',
+    name: "Predeterminado",
     background: 'bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900',
     playerX: 'text-blue-400',
     playerO: 'text-red-400',

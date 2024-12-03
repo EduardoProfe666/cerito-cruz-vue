@@ -1,15 +1,56 @@
+<template>
+  <div :class="[themes[currentTheme].background, 'min-h-screen flex items-center justify-center p-4']">
+    <div class="max-w-4xl w-full space-y-6">
+      <h1 :class="[themes[currentTheme].textColor, 'text-4xl font-bold text-center mb-8 animate-pulse']">
+        {{ $t('game.title') }}
+      </h1>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="space-y-6">
+          <GameBoard :theme="currentTheme" />
+        </div>
+        
+        <div class="space-y-6">
+          <TabNavigation 
+            :theme="currentTheme" 
+            @open-delete-modal="isDeleteModalOpen = true"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <DeleteDataModal 
+    :is-open="isDeleteModalOpen" 
+    :theme="currentTheme"
+    @close="isDeleteModalOpen = false"
+    @confirm="handleDeleteData"
+  />
+</template>
+
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import {ref, onMounted, onUnmounted, computed} from 'vue'
 import GameBoard from './GameBoard.vue'
-import GameStats from './GameStats.vue'
-import ThemeSelector from './ThemeSelector.vue'
+import TabNavigation from './TabNavigation.vue'
+import DeleteDataModal from './DeleteDataModal.vue'
 import { useGameStore } from '../stores/game'
 import { useSecretCode } from '../composables/useSecretCode'
 import { themes } from '../config/themes'
+import {useI18n} from "vue-i18n";
 
 const store = useGameStore()
 const { handleKeydown } = useSecretCode()
-const currentTheme = ref('default')
+const currentTheme = computed(() => store.theme)
+const isDeleteModalOpen = ref(false)
+
+const handleDeleteData = () => {
+  store.resetStats()
+  isDeleteModalOpen.value = false
+}
+
+const { locale } = useI18n()
+store.setLanguage(store.language)
+locale.value = store.language
 
 onMounted(() => {
   window.addEventListener('keydown', handleKeydown)
@@ -19,24 +60,3 @@ onUnmounted(() => {
   window.removeEventListener('keydown', handleKeydown)
 })
 </script>
-
-<template>
-  <div :class="[themes[currentTheme].background, 'min-h-screen flex items-center justify-center p-4']">
-    <div class="max-w-md w-full space-y-6">
-      <h1 :class="[themes[currentTheme].textColor, 'text-4xl font-bold text-center mb-8 animate-pulse']">
-        Cerito Cruz ⭕❌
-      </h1>
-
-      <GameBoard :theme="currentTheme" />
-      <ThemeSelector v-model="currentTheme" />
-      <GameStats :theme="currentTheme" />
-      
-      <button
-        @click="store.resetStats"
-        class="w-full py-3 bg-red-600/50 backdrop-blur-md text-white rounded-lg font-semibold hover:bg-red-700/50 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
-      >
-        Reiniciar Estadísticas
-      </button>
-    </div>
-  </div>
-</template>

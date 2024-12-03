@@ -10,6 +10,8 @@ export interface GameState {
   draws: number
   secretCode: string
   unlockedThemes: string[]
+  language: string
+  theme: string
 }
 
 export interface Theme {

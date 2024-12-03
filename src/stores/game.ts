@@ -8,7 +8,9 @@ export const useGameStore = defineStore('game', {
     gamesPlayed: 0,
     draws: 0,
     secretCode: '',
-    unlockedThemes: ['default']
+    unlockedThemes: ['default'],
+    theme: 'default',
+    language: navigator.language.split('-')[0] || 'es'
   }),
   actions: {
     incrementWins(player: 'X' | 'O') {
@@ -28,10 +30,15 @@ export const useGameStore = defineStore('game', {
       this.gamesPlayed = 0
       this.draws = 0
       this.unlockedThemes = ['default']
+      this.theme = 'default'
+    },
+    setLanguage(lang: string) {
+      this.language = lang
     },
     unlockTheme(themeId: string) {
       if (!this.unlockedThemes.includes(themeId)) {
         this.unlockedThemes.push(themeId)
+        this.theme = themeId
       }
     },
     checkAchievements() {
@@ -41,6 +48,9 @@ export const useGameStore = defineStore('game', {
       if (this.gamesPlayed === 10) this.unlockTheme('sunset')
       if (this.gamesPlayed === 15) this.unlockTheme('galaxy')
       if (this.xWins >= 5 && this.oWins >= 5) this.unlockTheme('candy')
+    },
+    setTheme(themeId: string) {
+      this.theme = themeId
     }
   },
   persist: true
