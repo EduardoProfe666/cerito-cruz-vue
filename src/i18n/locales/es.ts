@@ -80,7 +80,7 @@ export default {
     info: {
       title: 'Información',
       version: 'Versión: 1.0.0',
-      developer: 'Desarrollado por EduardoProfe666'
+      developer: 'Desarrollado por'
     }
   }
 }

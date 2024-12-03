@@ -47,7 +47,7 @@
         </h3>
         <p class="text-white/60 text-sm">
           {{ $t('settings.info.version') }}<br>
-          {{ $t('settings.info.developer') }}
+          {{ $t('settings.info.developer') }} <a class="text-yellow-400" href="https://eduardoprofe666.github.io" target="_blank" rel="noopener">EduardoProfe666</a>
         </p>
       </div>
     </div>
