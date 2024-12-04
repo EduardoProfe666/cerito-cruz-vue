@@ -152,7 +152,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import type { GameMode, AIDifficulty, Player } from '../types/game'
-import { useI18n } from 'vue-i18n'
 
 const emit = defineEmits<{
   (e: 'gameSetup', mode: GameMode, player: Player, difficulty?: AIDifficulty): void
@@ -186,17 +185,17 @@ const isLastStep = computed(() => {
   return currentStep.value === 3
 })
 
-const selectMode = (mode: GameMode) => {
+const selectMode = (mode: any) => {
   selectedMode.value = mode
   selectedDifficulty.value = null
   selectedPlayer.value = null
 }
 
-const selectDifficulty = (difficulty: AIDifficulty) => {
+const selectDifficulty = (difficulty: any) => {
   selectedDifficulty.value = difficulty
 }
 
-const selectPlayer = (player: Player) => {
+const selectPlayer = (player: any) => {
   selectedPlayer.value = player
 }
 

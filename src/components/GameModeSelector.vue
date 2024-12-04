@@ -49,7 +49,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import type { GameMode, AIDifficulty } from '../types/game'
-import {useI18n} from "vue-i18n";
 
 const emit = defineEmits<{
   (e: 'modeSelected', mode: GameMode, difficulty?: AIDifficulty): void
