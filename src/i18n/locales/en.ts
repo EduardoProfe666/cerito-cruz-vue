@@ -1,11 +1,29 @@
 export default {
   game: {
     title: 'Tic Tac Toe ⭕❌',
-    selectPlayer: 'Select starting player',
+    mode: 'Mode',
+    difficulty: 'Difficulty',
+    player: 'Player',
+    selectMode: 'Select Game Mode',
+    selectPlayer: 'Select Your Symbol',
+    selectDifficulty: 'Select AI Difficulty',
     currentTurn: "Player {player}'s turn",
     winner: 'Player {player} wins!',
     draw: "It's a draw!",
-    resetButton: 'Reset Game'
+    resetButton: 'Reset Game',
+    changeSettings: 'Change Settings',
+    back: 'Back',
+    next: 'Next',
+    start: 'Start Game',
+    modes: {
+      ai: 'vs AI',
+      pvp: '2 Players',
+    },
+    difficulties: {
+      easy: 'Easy',
+      medium: 'Medium',
+      hard: 'Hard'
+    }
   },
   tabs: {
     stats: 'Statistics',
@@ -18,6 +36,8 @@ export default {
     xWins: 'X Wins',
     oWins: 'O Wins',
     draws: 'Draws',
+    lost: 'Losses AI',
+    wins: 'AI Wins',
     totalGames: 'Total Games',
     winRate: 'Win Rate'
   },
@@ -66,7 +86,11 @@ export default {
     language: {
       title: 'Language',
       en: 'English',
-      es: 'Spanish'
+      es: 'Spanish',
+      fr: 'French',
+      it: 'Italian',
+      de: 'German',
+      pt: 'Portuguese'
     },
     data: {
       title: 'Game Data',
@@ -79,7 +103,7 @@ export default {
     },
     info: {
       title: 'Information',
-      version: 'Version: 1.0.0',
+      version: 'Version:',
       developer: 'Developed by'
     }
   }

@@ -1,11 +1,29 @@
 export default {
   game: {
     title: 'Cerito Cruz ⭕❌',
+    mode: 'Modo',
+    difficulty: 'Dificultad',
+    player: 'Jugador',
+    back: 'Atrás',
+    next: 'Siguiente',
+    modes: {
+      pvp: '2 Jugadores',
+      ai: 'vs IA'
+    },
+    difficulties: {
+      easy: 'Fácil',
+      medium: 'Medio',
+      hard: 'Difícil'
+    },
+    start: 'Iniciar Juego',
+    selectMode: 'Selecciona el Modo de Juego',
+    selectDifficulty: 'Selecciona la Dificultad de la IA',
     selectPlayer: 'Selecciona el jugador inicial',
     currentTurn: 'Turno del jugador {player}',
     winner: '¡Jugador {player} ha ganado!',
     draw: '¡Empate!',
-    resetButton: 'Reiniciar Partida'
+    resetButton: 'Reiniciar Partida',
+    changeSettings: 'Cambiar Ajustes'
   },
   tabs: {
     stats: 'Estadísticas',
@@ -18,6 +36,8 @@ export default {
     xWins: 'Victorias X',
     oWins: 'Victorias O',
     draws: 'Empates',
+    lost: 'Pérdidas IA',
+    wins: 'Victorias IA',
     totalGames: 'Partidas Totales',
     winRate: 'Tasa de Victoria'
   },
@@ -66,7 +86,11 @@ export default {
     language: {
       title: 'Idioma',
       en: 'Inglés',
-      es: 'Español'
+      es: 'Español',
+      fr: 'Francés',
+      it: 'Italiano',
+      de: 'Alemán',
+      pt: 'Portugués'
     },
     data: {
       title: 'Datos del Juego',
@@ -79,7 +103,7 @@ export default {
     },
     info: {
       title: 'Información',
-      version: 'Versión: 1.0.0',
+      version: 'Versión:',
       developer: 'Desarrollado por'
     }
   }

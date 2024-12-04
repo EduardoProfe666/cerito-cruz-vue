@@ -9,7 +9,7 @@
         <h3 class="text-lg font-semibold text-white mb-2">
           {{ $t('settings.language.title') }}
         </h3>
-        <div class="flex gap-2">
+        <div class="flex flex-wrap gap-2">
           <button
             v-for="lang in languages"
             :key="lang.code"
@@ -46,7 +46,7 @@
           {{ $t('settings.info.title') }}
         </h3>
         <p class="text-white/60 text-sm">
-          {{ $t('settings.info.version') }}<br>
+          {{ $t('settings.info.version') }} 1.1.3<br>
           {{ $t('settings.info.developer') }} <a class="text-yellow-400" href="https://eduardoprofe666.github.io" target="_blank" rel="noopener">EduardoProfe666</a>
         </p>
       </div>
@@ -72,12 +72,15 @@ defineEmits<{
 
 const languages = [
   { code: 'es', name: 'Español' },
-  { code: 'en', name: 'English' }
+  { code: 'en', name: 'English' },
+  { code: 'fr', name: 'Français' },
+  { code: 'it', name: 'Italiano' },
+  { code: 'de', name: 'Deutsch' },
+  { code: 'pt', name: 'Português' }
 ]
 
 const changeLanguage = (lang: string) => {
   store.setLanguage(lang)
   locale.value = lang
 }
-
 </script>
