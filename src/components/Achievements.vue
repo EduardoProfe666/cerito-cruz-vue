@@ -4,7 +4,7 @@
       {{ $t('achievements.title') }}
     </h2>
 
-    <div class="bg-white/10 backdrop-blur-md rounded-xl p-6">
+    <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 max-h-[60vh] overflow-y-auto custom-scrollbar">
       <!-- Game Mastery -->
       <AchievementSection :title="$t('achievements.sections.mastery')" icon="🎯">
         <AchievementCard

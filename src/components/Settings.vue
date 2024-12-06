@@ -3,18 +3,18 @@
     <h2 :class="[themes[theme].textColor, 'text-2xl font-bold mb-4']">
       {{ $t('settings.title') }}
     </h2>
-    
-    <div class="space-y-4">
+
+    <div class="max-h-[60vh] overflow-y-auto custom-scrollbar space-y-4">
       <div class="p-4 bg-white/5 backdrop-blur-sm rounded-lg">
         <h3 class="text-lg font-semibold text-white mb-2">
           {{ $t('settings.language.title') }}
         </h3>
         <div class="flex flex-wrap gap-2">
           <button
-            v-for="lang in languages"
-            :key="lang.code"
-            @click="changeLanguage(lang.code)"
-            :class="[
+              v-for="lang in languages"
+              :key="lang.code"
+              @click="changeLanguage(lang.code)"
+              :class="[
               'px-4 py-2 rounded-lg transition-all duration-300',
               store.language === lang.code
                 ? 'bg-white/20 text-white'
@@ -34,13 +34,13 @@
           {{ $t('settings.data.description') }}
         </p>
         <button
-          @click="$emit('openDeleteModal')"
-          class="w-full py-3 bg-red-600/50 backdrop-blur-md text-white rounded-lg font-semibold hover:bg-red-700/50 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+            @click="$emit('openDeleteModal')"
+            class="w-full py-3 bg-red-600/50 backdrop-blur-md text-white rounded-lg font-semibold hover:bg-red-700/50 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
         >
           {{ $t('settings.data.deleteButton') }}
         </button>
       </div>
-      
+
       <div class="p-4 bg-white/5 backdrop-blur-sm rounded-lg">
         <h3 class="text-lg font-semibold text-white mb-2">
           {{ $t('settings.info.title') }}

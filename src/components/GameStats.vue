@@ -5,7 +5,7 @@
       {{ $t('stats.title') }}
     </h2>
 
-    <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 space-y-8">
+    <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 max-h-[60vh] overflow-y-auto custom-scrollbar">
       <!-- Player Stats -->
       <StatSection :title="$t('stats.playerStats')" icon="👥" columns="grid-cols-2">
         <StatCard

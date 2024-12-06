@@ -1,4 +1,4 @@
-import { Board, Player } from '../types/game'
+import {Board, Player} from '../types/game'
 
 export function getAIMove(board: Board, difficulty: string, aiPlayer: Player): number {
   switch (difficulty) {
@@ -74,8 +74,7 @@ function findWinningMove(board: Board, player: Player): number {
     const emptyCount = line.filter(cell => cell === '').length
 
     if (playerCount === 2 && emptyCount === 1) {
-      const emptyIndex = pattern[line.indexOf('')]
-      return emptyIndex
+      return pattern[line.indexOf('')]
     }
   }
 
