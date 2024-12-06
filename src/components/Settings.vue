@@ -46,7 +46,7 @@
           {{ $t('settings.info.title') }}
         </h3>
         <p class="text-white/60 text-sm">
-          {{ $t('settings.info.version') }} 1.2.2<br>
+          {{ $t('settings.info.version') }} 1.3.1<br>
           {{ $t('settings.info.developer') }} <strong><a class="text-yellow-400" href="https://eduardoprofe666.github.io" target="_blank" rel="noopener">EduardoProfe666</a></strong> <span class="animate-pulse">🎩</span>
         </p>
       </div>

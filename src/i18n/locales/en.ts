@@ -33,6 +33,11 @@ export default {
   },
   stats: {
     title: 'Statistics',
+    playerStats: 'Player Statistics',
+    drawStats: 'Draw Statistics',
+    aiStats: 'AI Statistics',
+    difficultyStats: 'Difficulty Statistics',
+    overallStats: 'Overall Statistics',
     xWins: 'X Wins',
     oWins: 'O Wins',
     draws: 'Draws',
@@ -61,10 +66,17 @@ export default {
     medieval: 'Medieval Era',
     space: 'Outer Space',
     locked: 'Locked',
+    unlocked: 'Unlocked',
     unlockHint: 'Keep playing to unlock!',
   },
   achievements: {
     title: 'Achievements',
+    sections: {
+      mastery: 'Game Mastery',
+      experience: 'Experience',
+      aiChallenges: 'AI Challenges',
+      difficulty: 'Difficulty Conquests'
+    },
     masterX: {
       name: 'X Master',
       description: 'Win 3 games as X'

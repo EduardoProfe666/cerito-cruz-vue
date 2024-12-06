@@ -33,6 +33,11 @@ export default {
   },
   stats: {
     title: 'Statistiques',
+    playerStats: 'Statistiques du Joueur',
+    drawStats: 'Statistiques de Match Nul',
+    aiStats: 'Statistiques de l\'IA',
+    difficultyStats: 'Statistiques de Difficulté',
+    overallStats: 'Statistiques Générales',
     xWins: 'Victoires X',
     oWins: 'Victoires O',
     draws: 'Matchs nuls',
@@ -61,10 +66,17 @@ export default {
     medieval: 'Époque Médiévale',
     space: 'Espace Extraordinaire',
     locked: 'Verrouillé',
+    unlocked: 'Débloqué',
     unlockHint: 'Continuez à jouer pour débloquer !',
   },
   achievements: {
     title: 'Succès',
+    sections: {
+      mastery: 'Maîtrise du Jeu',
+      experience: 'Expérience',
+      aiChallenges: 'Défis de l\'IA',
+      difficulty: 'Conquêtes de Difficulté'
+    },
     masterX: {
       name: 'Maître X',
       description: 'Gagnez 3 parties en tant que X'

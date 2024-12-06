@@ -1,7 +1,108 @@
+<template>
+  <div class="space-y-4">
+    <h2 :class="[themes[store.theme].textColor, 'text-2xl font-bold mb-4 flex items-center gap-2']">
+      <span class="text-2xl">📊</span>
+      {{ $t('stats.title') }}
+    </h2>
+
+    <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 space-y-8">
+      <!-- Player Stats -->
+      <StatSection :title="$t('stats.playerStats')" icon="👥" columns="grid-cols-2">
+        <StatCard
+            :title="$t('stats.xWins')"
+            :value="store.xWins"
+            :percentage="xWinPercentage"
+            color="blue"
+            icon="⭕"
+        />
+        <StatCard
+            :title="$t('stats.oWins')"
+            :value="store.oWins"
+            :percentage="oWinPercentage"
+            color="red"
+            icon="❌"
+        />
+      </StatSection>
+
+      <!-- Draw Stats -->
+      <StatSection :title="$t('stats.drawStats')" icon="🤝" columns="grid-cols-1">
+        <StatCard
+            :title="$t('stats.draws')"
+            :value="store.draws"
+            color="purple"
+            icon="🔄"
+        />
+      </StatSection>
+
+      <!-- AI Stats -->
+      <StatSection :title="$t('stats.aiStats')" icon="🤖" columns="grid-cols-2">
+        <StatCard
+            :title="$t('stats.wins')"
+            :value="store.gamesWinAI"
+            color="pink"
+            icon="🏆"
+        />
+        <StatCard
+            :title="$t('stats.lost')"
+            :value="store.gamesLostAI"
+            color="yellow"
+            icon="💔"
+        />
+      </StatSection>
+
+      <!-- Difficulty Stats -->
+      <div class="space-y-4">
+        <h3 class="text-lg font-semibold text-white mb-4 flex items-center gap-2">
+          <span class="text-2xl">🎮</span>
+          {{ $t('stats.difficultyStats') }}
+        </h3>
+        <div class="space-y-4">
+          <div class="grid grid-cols-2 gap-4">
+            <StatCard
+                :title="$t('stats.easyWins')"
+                :value="store.easyAIWins"
+                color="gray"
+                icon="🌱"
+            />
+            <StatCard
+                :title="$t('stats.mediumWins')"
+                :value="store.mediumAIWins"
+                color="indigo"
+                icon="⚡"
+            />
+          </div>
+          <div class="flex justify-center">
+            <div class="w-1/2">
+              <StatCard
+                  :title="$t('stats.hardWins')"
+                  :value="store.hardAIWins"
+                  color="teal"
+                  icon="🔥"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Total Games -->
+      <StatSection :title="$t('stats.overallStats')" icon="🎯" columns="grid-cols-1">
+        <StatCard
+            :title="$t('stats.totalGames')"
+            :value="store.gamesPlayed"
+            color="green"
+            icon="🎲"
+        />
+      </StatSection>
+    </div>
+  </div>
+</template>
+
 <script setup lang="ts">
-import {useGameStore} from '../stores/game'
-import {computed} from 'vue'
-import {themes} from "../config/themes.ts";
+import { computed } from 'vue'
+import { useGameStore } from '../stores/game'
+import { themes } from '../config/themes'
+import StatCard from './stats/StatCard.vue'
+import StatSection from './stats/StatSection.vue'
 
 const store = useGameStore()
 
@@ -15,61 +116,3 @@ const oWinPercentage = computed(() => {
   return Math.round((store.oWins / store.gamesPlayed) * 100)
 })
 </script>
-
-<template>
-  <div class="space-y-4">
-    <h2 :class="[themes[store.theme].textColor, 'text-2xl font-bold mb-4']">{{ $t('stats.title') }}</h2>
-
-    <div class="bg-white/10 backdrop-blur-md rounded-xl p-6 mb-6">
-      <div class="grid grid-cols-2 gap-4 mb-4">
-        <div class="bg-blue-500/20 rounded-lg p-4 text-center">
-          <div class="text-4xl font-bold text-blue-200">{{ store.xWins }}</div>
-          <div class="text-sm text-blue-100">{{ $t('stats.xWins') }} ({{ xWinPercentage }}%)</div>
-        </div>
-        <div class="bg-red-500/20 rounded-lg p-4 text-center">
-          <div class="text-4xl font-bold text-red-200">{{ store.oWins }}</div>
-          <div class="text-sm text-red-100">{{ $t('stats.oWins') }} ({{ oWinPercentage }}%)</div>
-        </div>
-      </div>
-      <div class="grid grid-cols-1 gap-4 mb-4">
-        <div class="bg-purple-500/20 rounded-lg p-4 text-center">
-          <div class="text-4xl font-bold text-purple-200">{{ store.draws }}</div>
-          <div class="text-sm text-purple-100">{{ $t('stats.draws') }}</div>
-        </div>
-      </div>
-      <div class="grid grid-cols-2 gap-4 mb-4">
-        <div class="bg-gray-500/20 rounded-lg p-4 text-center">
-          <div class="text-4xl font-bold text-gray-200">{{ store.easyAIWins }}</div>
-          <div class="text-sm text-purple-100">{{ $t('stats.easyWins') }}</div>
-        </div>
-        <div class="bg-indigo-500/20 rounded-lg p-4 text-center">
-          <div class="text-4xl font-bold text-indigo-200">{{ store.mediumAIWins }}</div>
-          <div class="text-sm text-indigo-100">{{ $t('stats.mediumWins') }}</div>
-        </div>
-      </div>
-      <div class="grid grid-cols-1 gap-4 mb-4">
-        <div class="bg-teal-500/20 rounded-lg p-4 text-center">
-          <div class="text-4xl font-bold text-teal-200">{{ store.hardAIWins }}</div>
-          <div class="text-sm text-teal-100">{{ $t('stats.hardWins') }}</div>
-        </div>
-      </div>
-      <div class="grid grid-cols-2 gap-4 mb-4">
-        <div class="bg-pink-500/20 rounded-lg p-4 text-center">
-          <div class="text-4xl font-bold text-pink-200">{{ store.gamesWinAI }}</div>
-          <div class="text-sm text-purple-100">{{ $t('stats.wins') }}</div>
-        </div>
-        <div class="bg-yellow-500/20 rounded-lg p-4 text-center">
-          <div class="text-4xl font-bold text-yellow-200">{{ store.gamesLostAI }}</div>
-          <div class="text-sm text-purple-100">{{ $t('stats.lost') }}</div>
-        </div>
-      </div>
-      <div class="grid grid-cols-1 gap-4">
-        <div class="bg-green-500/20 rounded-lg p-4 text-center">
-          <div class="text-4xl font-bold text-green-200">{{ store.gamesPlayed }}</div>
-          <div class="text-sm text-green-100">{{ $t('stats.totalGames') }}</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</template>

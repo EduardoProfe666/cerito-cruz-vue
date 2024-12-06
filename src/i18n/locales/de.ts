@@ -33,6 +33,11 @@ export default {
   },
   stats: {
     title: 'Statistiken',
+    playerStats: 'Spielerstatistiken',
+    drawStats: 'Unentschiedenstatistiken',
+    aiStats: 'KI-Statistiken',
+    difficultyStats: 'Schwierigkeitsstatistiken',
+    overallStats: 'Gesamtstatistiken',
     xWins: 'X Siege',
     oWins: 'O Siege',
     lost: 'Verluste KI',
@@ -61,10 +66,17 @@ export default {
     medieval: 'Mittelalterliche Ära',
     space: 'Äußerer Raum',
     locked: 'Gesperrt',
+    unlocked: 'Freigeschaltet',
     unlockHint: 'Weiterspielen zum Freischalten!'
   },
   achievements: {
     title: 'Erfolge',
+    sections: {
+      mastery: 'Spielbeherrschung',
+      experience: 'Erfahrung',
+      aiChallenges: 'KI-Herausforderungen',
+      difficulty: 'Schwierigkeitsgewinne'
+    },
     masterX: {
       name: 'X-Meister',
       description: 'Gewinne 3 Spiele als X'

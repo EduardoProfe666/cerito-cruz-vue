@@ -33,6 +33,11 @@ export default {
     },
     stats: {
         title: 'Statisticae',
+        playerStats: 'Statistica Ludi',
+        drawStats: 'Statistica Aequationis',
+        aiStats: 'Statistica AI',
+        difficultyStats: 'Statistica Difficultatis',
+        overallStats: 'Statistica Generalis',
         xWins: 'X Vincit',
         oWins: 'O Vincit',
         draws: 'Aequitates',
@@ -61,10 +66,17 @@ export default {
         medieval: 'Aetas Mediaevalis',
         space: 'Spatium Externum',
         locked: 'Clausum',
+        unlocked: 'Apertum',
         unlockHint: 'Perge ludere ut aperias!',
     },
     achievements: {
         title: 'Adipiscenda',
+        sections: {
+            mastery: 'Dominatio Ludi',
+            experience: 'Experientia',
+            aiChallenges: 'Provocationes AI',
+            difficulty: 'Difficultatis Conquestus'
+        },
         masterX: {
             name: 'Magister X',
             description: 'Vince 3 ludos ut X'

@@ -33,6 +33,11 @@ export default {
   },
   stats: {
     title: 'Estatísticas',
+    playerStats: 'Estatísticas do Jogador',
+    drawStats: 'Estatísticas de Empate',
+    aiStats: 'Estatísticas da IA\'',
+    difficultyStats: 'Estatísticas de Dificuldade',
+    overallStats: 'Estatísticas Gerais',
     xWins: 'Vitórias X',
     oWins: 'Vitórias O',
     lost: 'Perdas',
@@ -61,10 +66,17 @@ export default {
     medieval: 'Era Medieval',
     space: 'Espaço Sideral',
     locked: 'Bloqueado',
+    unlocked: 'Desbloqueado',
     unlockHint: 'Continue jogando para desbloquear!',
   },
   achievements: {
     title: 'Conquistas',
+    sections: {
+      mastery: 'Mestria no Jogo',
+      experience: 'Experiência',
+      aiChallenges: 'Desafios de IA',
+      difficulty: 'Conquistas de Dificuldade'
+    },
     masterX: {
       name: 'Mestre X',
       description: 'Vença 3 jogos como X'

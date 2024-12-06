@@ -33,6 +33,11 @@ export default {
   },
   stats: {
     title: 'Statistiche',
+    playerStats: 'Statistiche del Giocatore',
+    drawStats: 'Statistiche di Pareggio',
+    aiStats: 'Statistiche dell\'IA',
+    difficultyStats: 'Statistiche di Difficoltà',
+    overallStats: 'Statistiche Generali',
     xWins: 'Vittorie X',
     oWins: 'Vittorie O',
     lost: 'Perdite IA',
@@ -61,10 +66,17 @@ export default {
     medieval: 'Era Medievale',
     space: 'Spazio Esterno',
     locked: 'Bloccato',
+    unlocked: 'Sbloccato',
     unlockHint: 'Continua a giocare per sbloccare!',
   },
   achievements: {
     title: 'Obiettivi',
+    sections: {
+      mastery: 'Maestria nel Gioco',
+      experience: 'Esperienza',
+      aiChallenges: 'Sfide IA',
+      difficulty: 'Conquiste di Difficoltà'
+    },
     masterX: {
       name: 'Maestro X',
       description: 'Vinci 3 partite come X'
