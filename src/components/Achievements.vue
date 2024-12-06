@@ -79,7 +79,43 @@ const achievements = [
     name: t('achievements.balanced.name'),
     description: t('achievements.balanced.description'),
     condition: () => store.xWins >= 5 && store.oWins >= 5
-  }
+  },
+  {
+    id: 'thanksgiving',
+    name: t('achievements.aiShooter.name'),
+    description: t('achievements.aiShooter.description'),
+    condition: () => store.gamesWinAI >= 5
+  },
+  {
+    id: 'halloween',
+    name: t('achievements.aiKiller.name'),
+    description: t('achievements.aiKiller.description'),
+    condition: () => store.gamesWinAI >= 10
+  },
+  {
+    id: 'christmas',
+    name: t('achievements.aiMaster.name'),
+    description: t('achievements.aiMaster.description'),
+    condition: () => store.gamesWinAI >= 15
+  },
+  {
+    id: 'tropical',
+    name: t('achievements.easyPeasy.name'),
+    description: t('achievements.easyPeasy.description'),
+    condition: () => store.easyAIWins >= 7
+  },
+  {
+    id: 'medieval',
+    name: t('achievements.mediumBreezy.name'),
+    description: t('achievements.mediumBreezy.description'),
+    condition: () => store.mediumAIWins >= 7
+  },
+  {
+    id: 'space',
+    name: t('achievements.hardAsHell.name'),
+    description: t('achievements.hardAsHell.description'),
+    condition: () => store.hardAIWins >= 7
+  },
 ]
 
 const isUnlocked = (achievement: typeof achievements[0]) => {

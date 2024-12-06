@@ -39,7 +39,10 @@ export default {
     wins: 'Vitórias IA',
     draws: 'Empates',
     totalGames: 'Total de Jogos',
-    winRate: 'Taxa de Vitória'
+    winRate: 'Taxa de Vitória',
+    easyWins: 'Vitórias Fáceis',
+    mediumWins: 'Vitórias Médias',
+    hardWins: 'Vitórias Difíceis',
   },
   themes: {
     title: 'Temas',
@@ -51,8 +54,14 @@ export default {
     galaxy: 'Galáxia',
     candy: 'Doce',
     retro: 'Konami',
+    thanksgiving: 'Ação de Graças',
+    halloween: 'Halloween',
+    christmas: 'Natal',
+    tropical: 'Festa Tropical',
+    medieval: 'Era Medieval',
+    space: 'Espaço Sideral',
     locked: 'Bloqueado',
-    unlockHint: 'Continue jogando para desbloquear!'
+    unlockHint: 'Continue jogando para desbloquear!',
   },
   achievements: {
     title: 'Conquistas',
@@ -79,7 +88,31 @@ export default {
     balanced: {
       name: 'Equilibrado',
       description: 'Consiga 5 vitórias com cada jogador'
-    }
+    },
+    aiShooter: {
+      name: 'Atirador de IA',
+      description: 'Ganhe 5 vitórias contra a IA'
+    },
+    aiKiller: {
+      name: 'Matador de IA',
+      description: 'Ganhe 10 vitórias contra a IA'
+    },
+    aiMaster: {
+      name: 'Mestre de IA',
+      description: 'Ganhe 15 vitórias contra a IA'
+    },
+    easyPeasy: {
+      name: 'Facinho',
+      description: 'Ganhe 7 vitórias contra a IA em dificuldade fácil'
+    },
+    mediumBreezy: {
+      name: 'Médio tranquilo',
+      description: 'Ganhe 15 vitórias contra a IA em dificuldade média'
+    },
+    hardAsHell: {
+      name: 'Difícil como o inferno',
+      description: 'Ganhe 15 vitórias contra a IA em dificuldade difícil'
+    },
   },
   settings: {
     title: 'Configurações',
@@ -90,7 +123,8 @@ export default {
       fr: 'Francês',
       it: 'Italiano',
       de: 'Alemão',
-      pt: 'Português'
+      pt: 'Português',
+      la: 'Latim'
     },
     data: {
       title: 'Dados do Jogo',

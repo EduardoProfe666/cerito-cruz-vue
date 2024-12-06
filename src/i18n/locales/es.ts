@@ -39,7 +39,10 @@ export default {
     lost: 'Pérdidas IA',
     wins: 'Victorias IA',
     totalGames: 'Partidas Totales',
-    winRate: 'Tasa de Victoria'
+    winRate: 'Tasa de Victoria',
+    easyWins: 'Victorias Fácil',
+    mediumWins: 'Victorias Medio',
+    hardWins: 'Victorias Difícil',
   },
   themes: {
     title: 'Temas',
@@ -51,6 +54,12 @@ export default {
     galaxy: 'Galáctico',
     candy: 'Acaramelado',
     retro: 'Konami',
+    thanksgiving: 'Acción de Gracias',
+    halloween: 'Día de Brujas',
+    christmas: 'Navidad',
+    tropical: 'Fiesta Tropical',
+    medieval: 'Época Medieval',
+    space: 'Espacio Sideral',
     locked: 'Bloqueado',
     unlockHint: '¡Sigue jugando para desbloquear!'
   },
@@ -79,7 +88,31 @@ export default {
     balanced: {
       name: 'Equilibrado',
       description: 'Consigue 5 victorias con cada jugador'
-    }
+    },
+    aiShooter: {
+      name: 'Tirador de IA',
+      description: 'Consigue 5 victorias contra la IA'
+    },
+    aiKiller: {
+      name: 'Asesino de IA',
+      description: 'Consigue 10 victorias contra la IA'
+    },
+    aiMaster: {
+      name: 'Maestro de IA',
+      description: 'Consigue 15 victorias contra la IA'
+    },
+    easyPeasy: {
+      name: 'Pan Comido',
+      description: 'Consigue 7 victorias contra la IA en Fácil'
+    },
+    mediumBreezy: {
+      name: 'A Medio Camino',
+      description: 'Consigue 7 victorias contra la IA en Medio'
+    },
+    hardAsHell: {
+      name: 'Q difíci me la pusite',
+      description: 'Consigue 7 victorias contra la IA en Difícil'
+    },
   },
   settings: {
     title: 'Configuración',
@@ -90,7 +123,8 @@ export default {
       fr: 'Francés',
       it: 'Italiano',
       de: 'Alemán',
-      pt: 'Portugués'
+      pt: 'Portugués',
+      la: 'Latín'
     },
     data: {
       title: 'Datos del Juego',

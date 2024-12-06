@@ -152,7 +152,7 @@ const checkWinner = () => {
           store.incrementGamesLost()
           playSound('draw')
         } else{
-          store.incrementGamesWinIA(board.value[a] as Player)
+          store.incrementGamesWinIA(board.value[a] as Player, aiDifficulty.value)
           playSound('win')
         }
       }

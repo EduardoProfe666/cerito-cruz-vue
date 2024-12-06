@@ -39,7 +39,10 @@ export default {
     lost: 'Pertes IA',
     wins: 'Victoires IA',
     totalGames: 'Parties totales',
-    winRate: 'Taux de victoire'
+    winRate: 'Taux de victoire',
+    easyWins: 'Gains Faciles',
+    mediumWins: 'Gains Moyens',
+    hardWins: 'Gains Difficiles',
   },
   themes: {
     title: 'Thèmes',
@@ -51,8 +54,14 @@ export default {
     galaxy: 'Galactique',
     candy: 'Bonbon',
     retro: 'Konami',
+    thanksgiving: 'Action de Grâce',
+    halloween: 'Halloween',
+    christmas: 'Noël',
+    tropical: 'Fête Tropicale',
+    medieval: 'Époque Médiévale',
+    space: 'Espace Extraordinaire',
     locked: 'Verrouillé',
-    unlockHint: 'Continuez à jouer pour débloquer !'
+    unlockHint: 'Continuez à jouer pour débloquer !',
   },
   achievements: {
     title: 'Succès',
@@ -79,7 +88,31 @@ export default {
     balanced: {
       name: 'Équilibré',
       description: 'Obtenez 5 victoires avec chaque joueur'
-    }
+    },
+    aiShooter: {
+      name: 'Tireur IA',
+      description: 'Obtenez 5 victoires contre l\'IA'
+    },
+    aiKiller: {
+      name: 'Tueur IA',
+      description: 'Obtenez 10 victoires contre l\'IA'
+    },
+    aiMaster: {
+      name: 'Maître IA',
+      description: 'Obtenez 15 victoires contre l\'IA'
+    },
+    easyPeasy: {
+      name: 'Facile comme bonjour',
+      description: 'Obtenez 7 victoires contre l\'IA en difficulté facile'
+    },
+    mediumBreezy: {
+      name: 'Moyennement facile',
+      description: 'Obtenez 15 victoires contre l\'IA en difficulté moyenne'
+    },
+    hardAsHell: {
+      name: 'Difficile comme l\'enfer',
+      description: 'Obtenez 15 victoires contre l\'IA en difficulté difficile'
+    },
   },
   settings: {
     title: 'Paramètres',
@@ -90,7 +123,8 @@ export default {
       fr: 'Français',
       it: 'Italien',
       de: 'Allemand',
-      pt: 'Portugais'
+      pt: 'Portugais',
+      la: 'Latin'
     },
     data: {
       title: 'Données du jeu',

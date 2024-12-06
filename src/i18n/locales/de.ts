@@ -39,7 +39,10 @@ export default {
     wins: 'Siege KI',
     draws: 'Unentschieden',
     totalGames: 'Gesamt Spiele',
-    winRate: 'Siegesquote'
+    winRate: 'Siegesquote',
+    easyWins: 'Einfache Gewinne',
+    mediumWins: 'Mittlere Gewinne',
+    hardWins: 'Schwere Gewinne',
   },
   themes: {
     title: 'Designs',
@@ -51,6 +54,12 @@ export default {
     galaxy: 'Galaktisch',
     candy: 'Süßigkeit',
     retro: 'Konami',
+    thanksgiving: 'Erntedankfest',
+    halloween: 'Halloween',
+    christmas: 'Weihnachten',
+    tropical: 'Tropische Party',
+    medieval: 'Mittelalterliche Ära',
+    space: 'Äußerer Raum',
     locked: 'Gesperrt',
     unlockHint: 'Weiterspielen zum Freischalten!'
   },
@@ -79,7 +88,31 @@ export default {
     balanced: {
       name: 'Ausgeglichen',
       description: 'Erreiche 5 Siege mit jedem Spieler'
-    }
+    },
+    aiShooter: {
+      name: 'KI-Schütze',
+      description: 'Erziele 5 Siege gegen die KI'
+    },
+    aiKiller: {
+      name: 'KI-Killer',
+      description: 'Erziele 10 Siege gegen die KI'
+    },
+    aiMaster: {
+      name: 'KI-Meister',
+      description: 'Erziele 15 Siege gegen die KI'
+    },
+    easyPeasy: {
+      name: 'Kinderleicht',
+      description: 'Erziele 7 Siege gegen die KI im leichten Schwierigkeitsgrad'
+    },
+    mediumBreezy: {
+      name: 'Mittelmäßig leicht',
+      description: 'Erziele 15 Siege gegen die KI im mittleren Schwierigkeitsgrad'
+    },
+    hardAsHell: {
+      name: 'Hölle schwer',
+      description: 'Erziele 15 Siege gegen die KI im schweren Schwierigkeitsgrad'
+    },
   },
   settings: {
     title: 'Einstellungen',
@@ -90,7 +123,8 @@ export default {
       fr: 'Französisch',
       it: 'Italienisch',
       de: 'Deutsch',
-      pt: 'Portugiesisch'
+      pt: 'Portugiesisch',
+      la: 'Latein'
     },
     data: {
       title: 'Spieldaten',

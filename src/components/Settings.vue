@@ -46,8 +46,8 @@
           {{ $t('settings.info.title') }}
         </h3>
         <p class="text-white/60 text-sm">
-          {{ $t('settings.info.version') }} 1.1.3<br>
-          {{ $t('settings.info.developer') }} <a class="text-yellow-400" href="https://eduardoprofe666.github.io" target="_blank" rel="noopener">EduardoProfe666</a>
+          {{ $t('settings.info.version') }} 1.2.2<br>
+          {{ $t('settings.info.developer') }} <strong><a class="text-yellow-400" href="https://eduardoprofe666.github.io" target="_blank" rel="noopener">EduardoProfe666</a></strong> <span class="animate-pulse">🎩</span>
         </p>
       </div>
     </div>
@@ -76,7 +76,8 @@ const languages = [
   { code: 'fr', name: 'Français' },
   { code: 'it', name: 'Italiano' },
   { code: 'de', name: 'Deutsch' },
-  { code: 'pt', name: 'Português' }
+  { code: 'pt', name: 'Português' },
+  { code: 'la', name: 'Latin'}
 ]
 
 const changeLanguage = (lang: string) => {

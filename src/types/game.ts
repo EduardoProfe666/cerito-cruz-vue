@@ -9,8 +9,11 @@ export interface GameState {
   xWins: number
   oWins: number
   gamesPlayed: number
-  gamesLostIA: number
-  gamesWinIA: number
+  gamesLostAI: number
+  gamesWinAI: number
+  easyAIWins: number;
+  mediumAIWins: number;
+  hardAIWins: number;
   draws: number
   secretCode: string
   unlockedThemes: string[]

@@ -5,6 +5,7 @@ import fr from './locales/fr'
 import it from './locales/it'
 import de from './locales/de'
 import pt from './locales/pt'
+import la from "./locales/la.ts";
 
 export const i18n = createI18n({
   legacy: false,
@@ -16,6 +17,7 @@ export const i18n = createI18n({
     fr,
     it,
     de,
-    pt
+    pt,
+    la
   }
 })

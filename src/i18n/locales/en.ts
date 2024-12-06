@@ -39,7 +39,10 @@ export default {
     lost: 'Losses AI',
     wins: 'AI Wins',
     totalGames: 'Total Games',
-    winRate: 'Win Rate'
+    winRate: 'Win Rate',
+    easyWins: 'Easy Wins',
+    mediumWins: 'Medium Wins',
+    hardWins: 'Hard Wins',
   },
   themes: {
     title: 'Themes',
@@ -51,8 +54,14 @@ export default {
     galaxy: 'Galaxy',
     candy: 'Candy',
     retro: 'Konami',
+    thanksgiving: 'Thanksgiving',
+    halloween: 'Halloween',
+    christmas: 'Christmas',
+    tropical: 'Tropical Party',
+    medieval: 'Medieval Era',
+    space: 'Outer Space',
     locked: 'Locked',
-    unlockHint: 'Keep playing to unlock!'
+    unlockHint: 'Keep playing to unlock!',
   },
   achievements: {
     title: 'Achievements',
@@ -79,7 +88,31 @@ export default {
     balanced: {
       name: 'Balanced',
       description: 'Get 5 wins with each player'
-    }
+    },
+    aiShooter: {
+      name: 'AI Shooter',
+      description: 'Get 5 wins against AI'
+    },
+    aiKiller: {
+      name: 'AI Killer',
+      description: 'Get 10 wins against AI'
+    },
+    aiMaster: {
+      name: 'AI Master',
+      description: 'Get 15 wins against AI'
+    },
+    easyPeasy: {
+      name: 'Easy Peasy',
+      description: 'Get 7 wins against AI in easy difficulty'
+    },
+    mediumBreezy: {
+      name: 'Medium Breezy',
+      description: 'Get 15 wins against AI in medium difficulty'
+    },
+    hardAsHell: {
+      name: 'Hard as Hell',
+      description: 'Get 15 wins against AI in hard difficulty'
+    },
   },
   settings: {
     title: 'Settings',
@@ -90,7 +123,8 @@ export default {
       fr: 'French',
       it: 'Italian',
       de: 'German',
-      pt: 'Portuguese'
+      pt: 'Portuguese',
+      la: 'Latin'
     },
     data: {
       title: 'Game Data',
