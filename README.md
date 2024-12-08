@@ -32,11 +32,29 @@ _A modern, elegant, and feature-rich Tic Tac Toe game built with Vue 3 + TypeScr
 
 ### 🤖 AI Intelligence
 
-- **Smart Decision Making**: Advanced AI using minimax algorithm
-- **Adaptive Difficulty**:
-  - 🌱 **Easy**: Random moves for casual play
-  - ⚡ **Medium**: Mix of strategic and random moves
-  - 🔥 **Hard**: Optimal moves using advanced strategy
+#### 🌟 Minimax Algorithm: The Strategic Mastermind
+
+##### How It Works
+- 🔍 Explores ALL possible game outcomes
+- 🏁 Predicts moves 3-9 steps ahead
+- ⚖️ Calculates best move by minimizing potential losses
+- 🛡️ Defends while seeking victory
+
+#### 🚦 Difficulty Levels: Intelligent Adaptation
+
+| Difficulty | Depth | Strategy | Challenge |
+|-----------|-------|----------|-----------|
+| `🍃 Easy`   | 2-3 moves | Exploratory | Beginner-friendly |
+| `⚡ Medium` | 4-5 moves | Balanced | Moderate challenge |
+| `🔥 Hard`   | Up to 9 moves | Near-perfect | Expert level |
+
+#### 🧩 Strategic Scoring System
+
+##### Key Evaluation Factors
+- 🎯 Center control (+15 points)
+- 🔺 Corner dominance (+10 points)
+- 🛡️ Blocking opponent's lines (+20 points)
+- 🏆 Potential winning moves (+25 points)
 
 ### 🎨 Theme Collection
 
